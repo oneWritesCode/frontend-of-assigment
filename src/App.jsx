@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import CreateTeamForm from "./pages/CreateTeamForm";
 import JoinTeamForm from "./pages/JoinTeamForm";
+import AddNote from "./pages/AddNote";
 import CreateAccount from "./pages/CreateAccount";
 
 function App() {
@@ -12,7 +13,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
-
 
   //aauthenticating use
   useEffect(() => {
@@ -81,6 +81,7 @@ function App() {
         //TODO: do he have a team? if yes redirect him to the page //need to
         work on ths page
         <Route path="/login" element={<Login />} />
+        <Route path="/add-note" element={<AddNote />} />
         <Route path="/register" element={<CreateAccount />} />
         <Route path="/create-team" element={<CreateTeamForm />} />
         <Route path="/join-team" element={<JoinTeamForm />} />
